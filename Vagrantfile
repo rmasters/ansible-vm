@@ -19,7 +19,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   config.vm.provision :shell, path: "setup.sh"
 
-  config.vm.provider "virtualbox" do |v|
-    v.name = "ansible_vm"
-  end
+  # Uncomment this if you want to be sure you're only running one VM
+  #
+  # config.vm.provider "virtualbox" do |v|
+  #   v.name = "ansible_vm"
+  # end
 end
